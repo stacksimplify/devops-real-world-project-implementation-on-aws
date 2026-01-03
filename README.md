@@ -368,6 +368,73 @@
 
 ## [What will students learn in your course?](https://links.stacksimplify.com/ultimate-aws-devops)
 
+### **Quick Overview: 20 Essential Skills**
+
+<details>
+<summary><b>🐳 Docker & Containerization (3 skills)</b></summary>
+
+- Master complete AWS DevOps with Docker, Kubernetes EKS, Terraform, and production-ready microservices deployment
+- Build production Docker images with multi-stage builds, push to ECR, and create multi-platform images for AMD64 and ARM64
+- Orchestrate multi-container applications with Docker Compose for local development and testing environments
+</details>
+
+<details>
+<summary><b>☸️ Kubernetes on AWS EKS (4 skills)</b></summary>
+
+- Deploy and manage Kubernetes applications on AWS EKS with Ingress, Load Balancers, SSL/TLS, and External DNS automation
+- Master all 5 Kubernetes Service types: ClusterIP, NodePort, LoadBalancer, ExternalName, and Headless Services
+- Deploy stateful applications with StatefulSets, persistent volumes, and AWS EBS CSI driver for production databases
+- Configure resource requests, limits, and quotas for optimal pod scheduling and production cluster management
+</details>
+
+<details>
+<summary><b>🏗️ Terraform Infrastructure as Code (1 skill)</b></summary>
+
+- Automate AWS infrastructure with Terraform: VPC, EKS clusters, RDS, ElastiCache, DynamoDB, and remote state management
+</details>
+
+<details>
+<summary><b>📦 Helm Package Manager (1 skill)</b></summary>
+
+- Package and deploy complex microservices using Helm charts with templating, versioning, and environment-specific configs
+</details>
+
+<details>
+<summary><b>⚡ Autoscaling & Cost Optimization (4 skills)</b></summary>
+
+- Implement Karpenter autoscaling for 70% cost savings using Spot instances with zero-downtime interruption handling
+- Handle AWS Spot interruptions gracefully with EventBridge, SQS, and PodDisruptionBudgets for zero-downtime production
+- Configure Horizontal Pod Autoscaler (HPA) with Metrics Server for CPU and memory-based autoscaling in production
+- Optimize AWS costs with Spot instances, right-sizing, consolidated billing, and infrastructure cost analysis
+</details>
+
+<details>
+<summary><b>🔍 Observability with OpenTelemetry (2 skills)</b></summary>
+
+- Master observability with OpenTelemetry, AWS X-Ray tracing, CloudWatch logs, Prometheus metrics, and Grafana dashboards
+- Implement auto-instrumentation for Java Spring Boot and Node.js microservices with OpenTelemetry collectors
+</details>
+
+<details>
+<summary><b>🚀 CI/CD & GitOps (2 skills)</b></summary>
+
+- Build complete CI/CD pipelines with GitHub Actions and ArgoCD for automated Docker builds and GitOps deployments
+- Master GitOps workflows with ArgoCD auto-sync, self-healing, and rollback strategies for reliable deployments
+</details>
+
+<details>
+<summary><b>🏪 Real-World Project (1 skill)</b></summary>
+
+- Deploy real retail store with 5 microservices integrated with AWS RDS, ElastiCache, DynamoDB, and SQS message queues
+</details>
+
+<details>
+<summary><b>🔒 Security & Troubleshooting (2 skills)</b></summary>
+
+- Implement production security with Kubernetes RBAC, AWS Secrets Manager, IAM roles, and IMDSv2 for EC2 instances
+- Learn production troubleshooting for Kubernetes pods, EKS nodes, Terraform state issues, and AWS service integration
+</details>
+
 ### **Docker & Containerization (8 Skills)**
 1. You will learn Docker fundamentals with installation, essential commands, and container lifecycle management.
 2. You will learn to build custom Docker images using Dockerfiles with all instructions (FROM, COPY, ADD, RUN, CMD, ENTRYPOINT, HEALTHCHECK, USER).
