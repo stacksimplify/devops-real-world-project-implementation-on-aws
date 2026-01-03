@@ -12,7 +12,7 @@
 
 All course concepts are explained with **interactive diagrams** (no PowerPoint slides). You can access them at below link
 
-**[🎨 Browse All Course Diagrams →](https://stacksimplify.github.io/course-image-previews/courses/aws-devops/)**
+**[Browse All Course Diagrams →](https://stacksimplify.github.io/course-image-previews/courses/aws-devops/)**
 
 - Visual explanations for every concept
 - Architecture flows and component interactions
