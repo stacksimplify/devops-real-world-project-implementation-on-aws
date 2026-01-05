@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ultimate DevOps Real-World Project - AWS Cloud | Stack Simplify</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Production-ready DevOps implementations on AWS with Terraform, Docker, Kubernetes, EKS, Karpenter, and complete observability stack">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="keywords" content="DevOps, AWS, Terraform, Docker, Kubernetes, EKS, Karpenter, GitOps, ArgoCD, OpenTelemetry, CI/CD">
+  <meta name="author" content="Stack Simplify - Kalyan Reddy Daida">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ultimate DevOps Real-World Project - AWS Cloud">
+  <meta property="og:description" content="Production-ready DevOps implementations - reduce AWS costs from $21/day to $3/day">
+  <meta property="og:url" content="https://stacksimplify.github.io/devops-real-world-project-implementation-on-aws/">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://stacksimplify.com/favicon.ico">
+  
+  <!-- Theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  
+  <!-- Custom Stack Simplify Styling -->
+  <style>
+    :root {
+      --theme-color: #FF6B35;
+      --theme-color-dark: #E85D2A;
+      --theme-color-light: #FF8C61;
+      --sidebar-width: 300px;
+    }
+    
+    /* Brand colors and professional styling */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    
+    .sidebar {
+      background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+      border-right: 1px solid #e1e4e8;
+    }
+    
+    .sidebar-nav {
+      padding: 20px 0;
+    }
+    
+    .sidebar-nav li {
+      margin: 0;
+    }
+    
+    .sidebar-nav li.active>a {
+      color: var(--theme-color);
+      font-weight: 600;
+      border-right: 3px solid var(--theme-color);
+      background: rgba(255, 107, 53, 0.1);
+    }
+    
+    .sidebar-nav a:hover {
+      color: var(--theme-color-dark);
+    }
+    
+    /* Section headers in sidebar */
+    .sidebar-nav > ul > li > strong {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #2c3e50;
+      display: block;
+      padding: 15px 25px 8px;
+      border-top: 1px solid #e1e4e8;
+      margin-top: 10px;
+    }
+    
+    .sidebar-nav > ul > li:first-child > strong {
+      border-top: none;
+      margin-top: 0;
+    }
+    
+    /* App name in sidebar */
+    .app-name {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--theme-color);
+      margin: 0 0 20px 0;
+      padding: 20px 25px;
+      border-bottom: 2px solid var(--theme-color);
+    }
+    
+    .app-name-link img {
+      max-width: 180px;
+      margin-bottom: 10px;
+    }
+    
+    /* Search box */
+    .search input {
+      border: 2px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 10px 15px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    
+    .search input:focus {
+      border-color: var(--theme-color);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+    }
+    
+    /* Main content */
+    .markdown-section {
+      max-width: 900px;
+      padding: 30px 40px 40px;
+    }
+    
+    .markdown-section h1 {
+      color: #2c3e50;
+      border-bottom: 3px solid var(--theme-color);
+      padding-bottom: 15px;
+      margin-top: 0;
+    }
+    
+    .markdown-section h2 {
+      color: #34495e;
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 10px;
+      margin-top: 40px;
+    }
+    
+    .markdown-section h3 {
+      color: #2c3e50;
+      margin-top: 30px;
+    }
+    
+    /* Code blocks */
+    .markdown-section pre {
+      border-radius: 8px;
+      border: 1px solid #e1e4e8;
+    }
+    
+    .markdown-section code {
+      border-radius: 4px;
+      padding: 2px 6px;
+      background: rgba(255, 107, 53, 0.1);
+      color: var(--theme-color-dark);
+    }
+    
+    .markdown-section pre>code {
+      background: #f6f8fa;
+      color: #24292e;
+      padding: 16px;
+    }
+    
+    /* Links */
+    .markdown-section a {
+      color: var(--theme-color);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+    
+    .markdown-section a:hover {
+      color: var(--theme-color-dark);
+      border-bottom-color: var(--theme-color-dark);
+    }
+    
+    /* Alerts/Admonitions */
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background: rgba(255, 107, 53, 0.05);
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    
+    /* Tables */
+    .markdown-section table {
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e1e4e8;
+    }
+    
+    .markdown-section table th {
+      background: var(--theme-color);
+      color: white;
+      font-weight: 600;
+      padding: 12px 15px;
+    }
+    
+    .markdown-section table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e1e4e8;
+    }
+    
+    .markdown-section table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    /* Copy code button */
+    .docsify-copy-code-button {
+      background: var(--theme-color) !important;
+      color: white !important;
+      border-radius: 4px !important;
+      font-size: 12px !important;
+    }
+    
+    .docsify-copy-code-button:hover {
+      background: var(--theme-color-dark) !important;
+    }
+    
+    /* Pagination */
+    .pagination-item-label svg {
+      fill: var(--theme-color);
+    }
+    
+    .pagination-item:not(.pagination-item--disabled):hover .pagination-item-label {
+      color: var(--theme-color-dark);
+    }
+    
+    /* Cover page */
+    section.cover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    section.cover .cover-main {
+      margin-top: -50px;
+    }
+    
+    section.cover h1 {
+      color: white;
+      font-size: 3.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    section.cover blockquote {
+      color: rgba(255,255,255,0.95);
+      font-size: 1.3em;
+    }
+    
+    section.cover .cover-main > p:last-child a {
+      background: var(--theme-color);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    section.cover .cover-main > p:last-child a:hover {
+      background: var(--theme-color-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+    }
+    
+    /* Mobile responsiveness */
+    @media screen and (max-width: 768px) {
+      .markdown-section {
+        padding: 20px;
+      }
+      
+      .markdown-section h1 {
+        font-size: 1.8em;
+      }
+      
+      .sidebar {
+        --sidebar-width: 280px;
+      }
+    }
+    
+    /* Custom emoji support */
+    img.emoji {
+      height: 1.2em;
+      vertical-align: middle;
+      margin: 0 0.2em;
+    }
+    
+    /* Progress bar */
+    .progress {
+      background-color: var(--theme-color) !important;
+    }
+    
+    /* Loading message */
+    #app:empty:after {
+      content: 'Loading amazing DevOps content... 🚀';
+      display: block;
+      text-align: center;
+      padding: 50px;
+      font-size: 1.2em;
+      color: var(--theme-color);
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+  
+  <script>
+    window.$docsify = {
+      name: '<img src="https://stacksimplify.com/course-images/udemy-ultimate-devops-realworld-implementation-on-aws.png" alt="Stack Simplify" style="max-width: 200px; margin: 10px 0;">',
+      repo: 'stacksimplify/devops-real-world-project-implementation-on-aws',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      homepage: 'README.md',
+      
+      // Cover page
+      coverpage: true,
+      onlyCover: false,
+      
+      // Sidebar configuration
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      
+      // Search plugin
+      search: {
+        maxAge: 86400000, // 1 day cache
+        paths: 'auto',
+        placeholder: '🔍 Search course content...',
+        noData: 'No results found 😞',
+        depth: 6,
+        hideOtherSidebarContent: false,
+      },
+      
+      // Pagination
+      pagination: {
+        previousText: '◀ Previous',
+        nextText: 'Next ▶',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      
+      // Copy code plugin
+      copyCode: {
+        buttonText: '📋 Copy',
+        errorText: '❌ Error',
+        successText: '✅ Copied!'
+      },
+      
+      // Execute scripts
+      executeScript: true,
+      
+      // Footer
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(html) {
+            // Add "Edit on GitHub" link
+            var url = 'https://github.com/stacksimplify/devops-real-world-project-implementation-on-aws/blob/main/' + vm.route.file;
+            var editHtml = '<div style="overflow: auto; margin-bottom: 20px;">';
+            editHtml += '<span style="float: right"><a href="' + url + '" target="_blank" style="text-decoration: none; color: var(--theme-color);">📝 Edit on GitHub</a></span>';
+            editHtml += '</div>';
+            return editHtml + html;
+          });
+          
+          hook.afterEach(function(html) {
+            // Add footer
+            var footer = [
+              '<hr/>',
+              '<footer style="text-align: center; padding: 20px; color: #7f8c8d;">',
+              '<p>Made with ❤️ by <a href="https://stacksimplify.com" target="_blank" style="color: var(--theme-color); text-decoration: none;">Stack Simplify</a></p>',
+              '<p style="font-size: 0.9em;">© ' + new Date().getFullYear() + ' Stack Simplify. All rights reserved.</p>',
+              '<p style="font-size: 0.85em;">',
+              '<a href="https://github.com/stacksimplify" target="_blank" style="margin: 0 10px;">GitHub</a> | ',
+              '<a href="https://www.youtube.com/@stacksimplify" target="_blank" style="margin: 0 10px;">YouTube</a> | ',
+              '<a href="https://www.linkedin.com/in/kalyan-reddy-daida/" target="_blank" style="margin: 0 10px;">LinkedIn</a>',
+              '</p>',
+              '</footer>'
+            ].join('');
+            return html + footer;
+          });
+        }
+      ],
+      
+      // External link handling
+      externalLinkTarget: '_blank',
+      
+      // 404 page
+      notFoundPage: true,
+      
+      // Markdown configuration
+      markdown: {
+        smartypants: true,
+        breaks: true,
+      },
+    }
+  </script>
+  
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  
+  <!-- Search plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  
+  <!-- Pagination plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  
+  <!-- Copy code plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  
+  <!-- Zoom image plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  
+  <!-- Emoji plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  
+  <!-- External script plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  
+  <!-- Syntax highlighting -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-dockerfile.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-hcl.min.js"></script>
+  
+  <!-- Google Analytics (replace with your tracking ID) -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+  
+  <!-- You can add your Google Analytics here -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR-GA-ID');
+  </script>
+  -->
+</body>
+</html>
