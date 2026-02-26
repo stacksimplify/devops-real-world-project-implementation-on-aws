@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: catalog
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     rollingUpdate:
       maxUnavailable: 1
