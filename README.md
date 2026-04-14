@@ -761,54 +761,49 @@ This comprehensive AWS DevOps course teaches **20 core competencies** through **
 
 ---
 
-## My Other AWS Courses
+## My Other Courses (383,000+ Students, 20 Courses)
 
-### [AWS EKS - Elastic Kubernetes Service - Masterclass](https://stacksimplify.com/courses/aws-eks-masterclass/)
-[![Image](https://stacksimplify.com/course-images/AWS-EKS-Kubernetes-Masterclass-DevOps-Microservices-course.png "AWS EKS Kubernetes - Masterclass")](https://stacksimplify.com/courses/aws-eks-masterclass/)
+> All courses available at [stacksimplify.com/courses](https://stacksimplify.com/courses/)
 
-### [Terraform on AWS with SRE & IaC DevOps | Real-World 20 Demos](https://links.stacksimplify.com/terraform-on-aws-with-sre-and-iacdevops)
-[![Image](https://stacksimplify.com/course-images/terraform-on-aws-best-seller.png "Terraform on AWS with SRE & IaC DevOps")](https://links.stacksimplify.com/terraform-on-aws-with-sre-and-iacdevops)
+### AWS Courses
 
-### [Terraform on AWS EKS Kubernetes IaC SRE - 50 Real-World Demos](https://links.stacksimplify.com/terraform-on-aws-eks-kubernetes-iac-sre)
-[![Image](https://stacksimplify.com/course-images/terraform-on-aws-eks-kubernetes.png "Terraform on AWS EKS Kubernetes IaC SRE")](https://links.stacksimplify.com/terraform-on-aws-eks-kubernetes-iac-sre)
+| Course | Students | Rating |
+|--------|----------|--------|
+| [AWS EKS Kubernetes Masterclass](https://stacksimplify.com/courses/aws-eks-masterclass/) | 70,041+ | 4.6 (5,495 ratings) |
+| [AWS VPC Transit Gateway](https://stacksimplify.com/courses/aws-vpc-transit-gateway/) | 52,243+ | 4.6 (790 ratings) |
+| [Terraform on AWS with SRE and IaC DevOps](https://stacksimplify.com/courses/terraform-on-aws-sre/) | 31,006+ | 4.6 (3,347 ratings) |
+| [Terraform on AWS EKS Kubernetes IaC SRE](https://stacksimplify.com/courses/terraform-aws-eks/) | 26,929+ | 4.5 (2,238 ratings) |
+| [HashiCorp Certified: Terraform Associate (AWS)](https://stacksimplify.com/courses/hashicorp-terraform-associate-aws/) | 16,835+ | 4.6 (1,754 ratings) |
+| [AWS CloudFormation Simplified](https://stacksimplify.com/courses/aws-cloudformation/) | 16,223+ | 4.3 (1,469 ratings) |
+| [AWS Fargate and ECS Masterclass](https://stacksimplify.com/courses/aws-fargate-ecs/) | 15,208+ | 4.4 (1,051 ratings) |
+| [AWS CodePipeline CI/CD](https://stacksimplify.com/courses/aws-codepipeline/) | 9,832+ | 4.0 (966 ratings) |
+| [AWS Elastic Beanstalk Master Class](https://stacksimplify.com/courses/aws-elastic-beanstalk/) | 7,588+ | 4.3 (373 ratings) |
+| [Ultimate DevOps Real-World Project on AWS](https://stacksimplify.com/courses/ultimate-devops-real-world-project-on-aws/) | 4,772+ | 4.72 (358 ratings) |
 
-### [HashiCorp Certified: Terraform Associate - 50 Practical Demos](https://links.stacksimplify.com/hashicorp-certified-terraform-associate)
-[![Image](https://stacksimplify.com/course-images/hashicorp-certified-terraform-associate-highest-rated.png "HashiCorp Certified: Terraform Associate")](https://links.stacksimplify.com/hashicorp-certified-terraform-associate)
+### Azure Courses
 
-### [Helm Masterclass: 50 Practical Demos for Kubernetes DevOps](https://links.stacksimplify.com/helm-masterclass-kubernetes-devops)
-[![Image](https://stacksimplify.com/course-images/helm-masterclass-kubernetes-devops.png "Helm Masterclass")](https://links.stacksimplify.com/helm-masterclass-kubernetes-devops)
+| Course | Students | Rating |
+|--------|----------|--------|
+| [Azure Kubernetes Service with Azure DevOps and Terraform](https://stacksimplify.com/courses/azure-aks-devops-terraform/) | 48,551+ | 4.6 (6,196 ratings) |
+| [Terraform on Azure with IaC DevOps SRE](https://stacksimplify.com/courses/terraform-on-azure/) | 17,918+ | 4.7 (1,911 ratings) |
+| [Azure HashiCorp Certified: Terraform Associate](https://stacksimplify.com/courses/hashicorp-terraform-associate-azure/) | 16,938+ | 4.5 (1,985 ratings) |
+| [Azure Kubernetes Service AGIC Ingress](https://stacksimplify.com/courses/azure-aks-agic/) | 2,012+ | 4.6 (112 ratings) |
 
-### [Docker in a Weekend: 40 Practical Demos for DevOps Learners](https://links.stacksimplify.com/docker-in-a-weekend-40-practical-demos-for-devops)
-[![Image](https://stacksimplify.com/course-images/docker-in-a-weekend.png "Docker in a Weekend")](https://links.stacksimplify.com/docker-in-a-weekend-40-practical-demos-for-devops)
+### GCP Courses
 
----
+| Course | Students | Rating |
+|--------|----------|--------|
+| [GCP Google Kubernetes Engine GKE with DevOps](https://stacksimplify.com/courses/gcp-gke-kubernetes/) | 8,769+ | 4.4 (779 ratings) |
+| [GCP Associate Cloud Engineer Certification](https://stacksimplify.com/courses/gcp-associate-cloud-engineer/) | 6,007+ | 4.6 (599 ratings) |
+| [GCP Terraform on Google Cloud](https://stacksimplify.com/courses/gcp-terraform/) | 2,600+ | 4.4 (213 ratings) |
+| [GCP GKE Terraform on Google Kubernetes Engine](https://stacksimplify.com/courses/gcp-gke-terraform/) | 2,040+ | 4.6 (155 ratings) |
 
-## My Azure Courses
+### DevOps and General
 
-### [Azure Kubernetes Service with Azure DevOps and Terraform](https://stacksimplify.com/courses/azure-aks-devops-terraform/)
-[![Image](https://stacksimplify.com/course-images/azure-kubernetes-service-with-azure-devops-and-terraform.png "Azure Kubernetes Service with Azure DevOps and Terraform")](https://stacksimplify.com/courses/azure-aks-devops-terraform/)
-
-### [Azure - HashiCorp Certified: Terraform Associate - 70 Demos](https://links.stacksimplify.com/azure-hashicorp-certified-terraform-associate)
-[![Image](https://stacksimplify.com/course-images/azure-hashicorp-certified-terraform-associate-highest-rated.png "Azure - HashiCorp Certified: Terraform Associate")](https://links.stacksimplify.com/azure-hashicorp-certified-terraform-associate)
-
-### [Terraform on Azure with IaC DevOps and SRE | Real-World 25 Demos](https://links.stacksimplify.com/terraform-on-azure-with-iac-devops-sre)
-[![Image](https://stacksimplify.com/course-images/terraform-on-azure-with-iac-azure-devops-sre-1.png "Terraform on Azure with IaC DevOps and SRE")](https://links.stacksimplify.com/terraform-on-azure-with-iac-devops-sre)
-
----
-
-## My GCP (Google Cloud) Courses
-
-### [GCP Google Kubernetes Engine GKE with DevOps - 75 Real-World Demos](https://links.stacksimplify.com/gcp-google-kubernetes-engine-gke-with-devops)
-[![Image](https://stacksimplify.com/course-images/gcp-gke-with-devops.png "GCP GKE with DevOps")](https://links.stacksimplify.com/gcp-google-kubernetes-engine-gke-with-devops)
-
-### [GCP Terraform on Google Cloud: DevOps SRE IaC - 30 Real-World Demos](https://links.stacksimplify.com/gcp-terraform-on-google-cloud-devops-sre-iac)
-[![Image](https://stacksimplify.com/course-images/gcp-terraform-devops-sre.png "GCP Terraform on Google Cloud")](https://links.stacksimplify.com/gcp-terraform-on-google-cloud-devops-sre-iac)
-
-### [GCP Associate Cloud Engineer Google Certification - 150 Demos](https://links.stacksimplify.com/gcp-associate-cloud-engineer-google-certification)
-[![Image](https://stacksimplify.com/course-images/gcp-ace.png "GCP Associate Cloud Engineer")](https://links.stacksimplify.com/gcp-associate-cloud-engineer-google-certification)
-
-### [GCP GKE Terraform on Google Kubernetes Engine DevOps SRE - 40 Demos](https://links.stacksimplify.com/gcp-gke-terraform-on-google-kubernetes-engine)
-[![Image](https://stacksimplify.com/course-images/gcp-gke-terraform.png "GCP GKE Terraform")](https://links.stacksimplify.com/gcp-gke-terraform-on-google-kubernetes-engine)
+| Course | Students | Rating |
+|--------|----------|--------|
+| [Helm Masterclass: 50 Practical Demos](https://stacksimplify.com/courses/helm-masterclass/) | 12,069+ | 4.7 (915 ratings) |
+| [Docker in a Weekend: 40 Practical Demos](https://stacksimplify.com/courses/docker-weekend/) | 3,802+ | 4.6 (361 ratings) |
 
 ---
 
