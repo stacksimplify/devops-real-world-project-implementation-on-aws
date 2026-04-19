@@ -10,12 +10,20 @@ resource "helm_release" "secrets_store_csi_driver" {
   chart      = "secrets-store-csi-driver"
   namespace  = "kube-system"
 
+  # Note: tokenRequests is required for EKS Pod Identity authentication when
+  # the CSI driver is installed separately (not bundled via the AWS provider chart).
+  # Audience "pods.eks.amazonaws.com" is for EKS Pod Identity. We do not configure
+  # the IRSA audience (sts.amazonaws.com) because this course uses Pod Identity only.
   set = [
     {
       name  = "syncSecret.enabled"
       value = "true"
     },
-  ]    
+    {
+      name  = "tokenRequests[0].audience"
+      value = "pods.eks.amazonaws.com"
+    },
+  ]
 
   # Wait until all pods are ready
   wait            = true
