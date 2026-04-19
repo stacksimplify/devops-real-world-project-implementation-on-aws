@@ -118,7 +118,8 @@ Install the core driver that enables Kubernetes to mount external secrets.
 # Install the Secrets Store CSI Driver in the kube-system namespace:
 helm install csi-secrets-store \
   secrets-store-csi-driver/secrets-store-csi-driver \
-  --namespace kube-system
+  --namespace kube-system \
+  --set tokenRequests[0].audience="pods.eks.amazonaws.com"
 
 # List all Helm releases across namespaces:
 helm list --all-namespaces
@@ -133,6 +134,8 @@ helm status csi-secrets-store -n kube-system
 # Verify pods:
 kubectl get pods -n kube-system -l app=secrets-store-csi-driver
 ```
+
+> **Important Note:** The `--set tokenRequests[0].audience="pods.eks.amazonaws.com"` flag is required when installing the CSI driver separately (as we do here). It tells the CSI driver to request service account tokens with the EKS Pod Identity audience so pods can authenticate to AWS. Without this flag, pods using Pod Identity will fail with the error `serviceAccount.tokens not provided`. We only configure the `pods.eks.amazonaws.com` audience because this course uses EKS Pod Identity (not IRSA).
 
 ✅ Example:
 
