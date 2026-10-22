@@ -344,8 +344,8 @@ kubectl exec -it <mysql-pod-name> -- cat /mnt/secrets-store/MYSQL_PASSWORD
 
 # Catalog Pod
 kubectl exec -it <catalog-pod-name> -- ls /mnt/secrets-store
-kubectl exec -it <catalog-pod-name> -- cat /mnt/secrets-store/MYSQL_USER
-kubectl exec -it <catalog-pod-name> -- cat /mnt/secrets-store/MYSQL_PASSWORD
+kubectl exec -it <catalog-pod-name> -- cat /mnt/secrets-store/RETAIL_CATALOG_PERSISTENCE_USER
+kubectl exec -it <catalog-pod-name> -- cat /mnt/secrets-store/RETAIL_CATALOG_PERSISTENCE_PASSWORD
 ```
 
 
