@@ -70,7 +70,7 @@ argocd repo add https://github.com/stacksimplify/aws-devops-github-actions-ecr-a
 
 argocd repo add https://github.com/stacksimplify/aws-devops-github-actions-ecr-argocd3.git \
   --username stacksimplify \
-  --password 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 \
+  --password <your-personal-access-token> \
   --name aws-devops-github-actions-ecr-argocd3  
 ```
 
